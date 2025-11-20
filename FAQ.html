@@ -1,103 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+body {
+  background-image: url('https://thumbs.dreamstime.com/b/natural-wooden-blocks-printed-letters-forming-word-faq-light-desk-fresh-green-leaves-representing-questions-answers-405837266.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/* Accordion Button */
 .accordion {
-  background-color: rgba(238, 238, 238, 0.5);
-  color: #444;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #333;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
-  text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 16px;
+  text-align: left;
   transition: 0.4s;
+  border-bottom: 1px solid #ddd;
+  position: relative;
 }
 
-.active, .accordion:hover {
-  background-color: #ccc; 
+/* Plus/Minus Icons */
+.accordion:after {
+  content: '\002B'; /* plus sign */
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
 }
 
+.accordion.active:after {
+  content: '\2212'; /* minus sign */
+}
+
+/* Hover effect */
+.accordion:hover {
+  background-color: rgba(220, 220, 220, 0.85);
+}
+
+/* Panel */
 .panel {
   padding: 0 18px;
-  display: none;
-  background-color: white;
+  max-height: 0;
   overflow: hidden;
+  background-color: white;
+  transition: max-height 0.3s ease-out;
+  border-left: 3px solid #4CAF50;
 }
-
-
-body {
-  background-image: url('https://thumbs.dreamstime.com/b/natural-wooden-blocks-printed-letters-forming-word-faq-light-desk-fresh-green-leaves-representing-questions-answers-405837266.jpg');
-        background-position: center;
-      background-repeat: no-repeat; 
-      background-size: cover; 
-}
-
 </style>
 </head>
+
 <body>
 
-<button class="accordion">Team Info ></button>
+<!-- FAQ SECTION START -->
+
+<button class="accordion">1. What is the SmartLeaf Health Detector?</button>
 <div class="panel">
-  <p>We are Student from SMKBJ.</p>
+  <p>SmartLeaf is an AI-powered system that uses the HuskyLens camera to analyze leaf images and detect signs of disease, stress, or nutrient deficiency.</p>
 </div>
 
-<button class="accordion">Team History ></button>
+<button class="accordion">2. How does SmartLeaf detect leaf health?</button>
 <div class="panel">
-  <p>Our team start when one of our member joined a competition in Penang, Malaysia. Ever then our team has grown mature with more project idea and more member</p>
+  <p>The HuskyLens captures a leaf image and sends it into an AI model. The AI checks colour, texture, patterns, and disease-like spots to determine the leaf’s condition.</p>
 </div>
 
-<button class="accordion">Product Information ></button>
+<button class="accordion">3. What hardware does SmartLeaf use?</button>
 <div class="panel">
-  <p>Our product is AI-Driven Plant Health Monitor, It detacts unusual spots like Dark/Brownish spots, holes and the colour of the leaf</p>
+  <p>SmartLeaf currently uses HuskyLens for image detection and a Raspberry Pi Zero 2 W to process the data and send the results to a Telegram bot using WiFi.</p>
 </div>
 
-<button class="accordion">What's the aim of the product develop by Coding Chaos? ></button>
+<button class="accordion">4. What does the Raspberry Pi do?</button>
 <div class="panel">
-  <p>Our product is specifically design to help farmers and the PERHILITAN to decrease the ammount of sick trees aiming for a better live for human and tree. It is also an educational kit for Biology and Geography student</p>
+  <p>The Raspberry Pi works as the communication brain. It receives detection results, processes them, and sends real-time notifications to Telegram.</p>
 </div>
 
-<button class="accordion">How can i be part of your membership? ></button>
+<button class="accordion">5. Why use AI instead of human observation?</button>
 <div class="panel">
-  <p>Membership is only available for SMKBJ student, For membership kindly email to <a href="mailto:eco.guardian2025@outlook.com">eco.guardian2025@outlook.com</a>.</p>
+  <p>AI can detect tiny changes that humans usually miss, especially at early stages of disease. This helps with faster action and reduces tree loss.</p>
 </div>
 
-<button class="accordion">What is the product price range? ></button>
+<button class="accordion">6. What is the main purpose of SmartLeaf?</button>
 <div class="panel">
-  <p>We aim for our product to be lower than current market price for other simmilar product.</p>
+  <p>SmartLeaf aims to assist farmers, environmental officers, PERHILITAN, and students by offering a fast and reliable AI-driven plant health diagnosis tool.</p>
 </div>
 
-<button class="accordion">Can i make this device my self? ></button>
+<button class="accordion">7. Can I buy SmartLeaf?</button>
 <div class="panel">
-  <p>Yes, but it is currently not available for now, come back in the future😁</p>
+  <p>Yes! SmartLeaf will be available soon as both a fully assembled product and a DIY educational kit.  
+  <br><br><b>You can purchase it directly from our team.</b></p>
 </div>
 
-<button class="accordion">What is the components used in this product and where do i get them? ></button>
+<button class="accordion">8. Where can I get the components?</button>
 <div class="panel">
-  <p>Our product uses BBC Micro:bit V2, Huskylens, Raspberry pi zero 2 W, etc. All the parts can be bought in<a href="https://cytron.io"> Cytron.io</a> .</p>
+  <p>You can purchase the full SmartLeaf kit directly from us. Individual components will also be available through our official order form.</p>
 </div>
 
-<button class="accordion">Can I buy ready made product from you or do i have assemble it my self? ></button>
+<button class="accordion">9. Can SmartLeaf be customized for farms or plantations?</button>
 <div class="panel">
-  <p>Maybe in the future yes but we are still updating and upgrading our product😁.</p>
+  <p>Yes. We offer customized AI models, multiple device deployment, and integration with farm monitoring dashboards upon request.</p>
 </div>
 
+<button class="accordion">10. Is SmartLeaf suitable for school projects?</button>
+<div class="panel">
+  <p>Absolutely. SmartLeaf is designed as an educational-friendly kit for Biology, Geography, STEM, and AI learning activities.</p>
+</div>
+
+<button class="accordion">11. Does SmartLeaf need internet?</button>
+<div class="panel">
+  <p>SmartLeaf only needs WiFi if you want to send results to Telegram. The AI detection itself works offline.</p>
+</div>
+
+<button class="accordion">12. Can it run in the forest?</button>
+<div class="panel">
+  <p>Yes. SmartLeaf is portable and can operate offline. If there's no WiFi, results will be stored locally and uploaded later.</p>
+</div>
+
+<button class="accordion">13. Will more sensors be added in the future?</button>
+<div class="panel">
+  <p>Yes. The next version may include temperature, humidity, air quality, and soil sensors for more accurate plant health analytics.</p>
+</div>
+
+<!-- FAQ SECTION END -->
 
 <script>
 var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
+for (let i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
+
     var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
     } else {
-      panel.style.display = "block";
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
 }
